@@ -1,10 +1,16 @@
-1.RepeatCounter takes a string of single letter and single letter of word to search and
+1.RepeatCounter takes a string of single letter and null to search and
+outputs matched word and count of matches found
+input_string:"a"
+input _word:""
+output:0
+
+2.RepeatCounter takes a string of single letter and single letter of word to search and
 outputs matched word and count of matches found
 input_string:"a"
 input _word:"a"
 output:1
 
-2.RepeatCounter takes a string of one word of two letters and single letter of word to search and
+3.RepeatCounter takes a string of one word of two letters and single letter of word to search and
 outputs matched word and count of matches found
 input_string:"aA"
 input _word:"a"
@@ -22,7 +28,7 @@ input_string:"aa A"
 input _word:"a"
 output:1
 
-5.RepeatCounter takes a string of two words  and single letter of word to search and 
+5.RepeatCounter takes a string of two words  and single letter of word to search and
 outputs matched word and count of matches found
 input_string:"aa Aa"
 input _word:"a"

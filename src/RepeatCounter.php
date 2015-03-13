@@ -6,8 +6,11 @@ class RepeatCounter
     function countRepeats($string, $word)
     {
         $count = 0;
-        $input_str_array = explode(" ", $string);
-        if(in_array($word, $input_str_array))
+
+        $str_lower = strtolower($string);
+        $input_str_array = explode(" ", $str_lower);
+        $search_word = strtolower($word);
+        if(in_array($search_word, $input_str_array))
         $count++;
         return  $count;
     }
