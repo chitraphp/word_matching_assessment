@@ -16,19 +16,19 @@ input_string:"aA"
 input _word:"a"
 output:0
 
-3.RepeatCounter takes a string of two words of single letter and single letter of word to search and
+4.RepeatCounter takes a string of two words of single letter and single letter of word to search and
 outputs matched word and count of matches found
 input_string:"a A"
 input _word:"a"
 output:2
 
-4.RepeatCounter takes a string of two words  and single letter of word to search and
+5.RepeatCounter takes a string of two words  and single letter of word to search and
 outputs matched word and count of matches found
 input_string:"aa A"
 input _word:"a"
 output:1
 
-5.RepeatCounter takes a string of two words  and single letter of word to search and
+6.RepeatCounter takes a string of two words  and single letter of word to search and
 outputs matched word and count of matches found
 input_string:"aa Aa"
 input _word:"a"

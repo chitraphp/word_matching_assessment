@@ -111,17 +111,6 @@ class RepeatCounterTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(2,$result);
     }
 
-    function test_string_partOfwords_word()
-    {
-        //Arrange
-        $test_RepeatCounter = new RepeatCounter;
-        $input_string = "today it is isolated ise, isotope tomorrow is rainy";
-        $search_word = "is";
-        //Act
-        $result = $test_RepeatCounter->countRepeats($input_string, $search_word);
-        //Assert
-        $this->assertEquals(2,$result);
-    }
-
+    
 }
 ?>

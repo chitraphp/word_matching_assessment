@@ -13,18 +13,7 @@ class RepeatCounter
         $str_size=0;
         $search_word = strtolower($word);
 
-        // while($str_size < sizeof($input_str_array))
-        // {
-        //     foreach($input_str_array as $input_str )
-        //         {
-        //             if($search_word == $input_str)
-        //             {
-        //                 $count++;
-        //                 $str_size++;
-        //             }
-        //         }
-        //
-        // }
+
         foreach($input_str_array as $input_str )
                 {
                     if($search_word == $input_str)

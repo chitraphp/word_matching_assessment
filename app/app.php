@@ -16,8 +16,9 @@
 
         $form_string = $_GET['input_string'];
         $form_word = $_GET['search_word'];
-        if(empty($_GET['input_string']) && ($_GET['search_word']))
+        if(empty($form_string) && empty($form_word))
         {
+
             $result = "You should enter string and a word to search";
             return $app['twig']->render('error.twig', array("error"=>$result));
 
@@ -35,6 +36,7 @@
 
         else
         {
+            
             $new_repeatCounter = new Repeatcounter;
             $result = $new_repeatCounter->countRepeats($form_string, $form_word);
             return $app['twig']->render('results.twig', array("count"=>$result));
