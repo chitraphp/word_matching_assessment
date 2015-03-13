@@ -63,6 +63,65 @@ class RepeatCounterTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(1,$result);
     }
 
+    function test_twoWords_Word_noMatch()
+    {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $input_string = " A ab";
+        $search_word = "aab";
+        //Act
+        $result = $test_RepeatCounter->countRepeats($input_string, $search_word);
+        //Assert
+        $this->assertEquals(0,$result);
+    }
+
+    function test_twoWords_match()
+    {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $input_string = "aB ab";
+        $search_word = "ab";
+        //Act
+        $result = $test_RepeatCounter->countRepeats($input_string, $search_word);
+        //Assert
+        $this->assertEquals(2,$result);
+    }
+
+    function test_string_word()
+    {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $input_string = "today it is sunny,tomorrow is rainy";
+        $search_word = "is";
+        //Act
+        $result = $test_RepeatCounter->countRepeats($input_string, $search_word);
+        //Assert
+        $this->assertEquals(2,$result);
+    }
+
+    function test_stringPartOfword_word()
+    {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $input_string = "today it is sunny, isotope tomorrow is rainy";
+        $search_word = "is";
+        //Act
+        $result = $test_RepeatCounter->countRepeats($input_string, $search_word);
+        //Assert
+        $this->assertEquals(2,$result);
+    }
+
+    function test_string_partOfwords_word()
+    {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $input_string = "today it is isolated ise, isotope tomorrow is rainy";
+        $search_word = "is";
+        //Act
+        $result = $test_RepeatCounter->countRepeats($input_string, $search_word);
+        //Assert
+        $this->assertEquals(2,$result);
+    }
 
 }
 ?>

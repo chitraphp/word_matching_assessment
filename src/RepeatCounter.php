@@ -8,11 +8,33 @@ class RepeatCounter
         $count = 0;
 
         $str_lower = strtolower($string);
+        $input_str_array = array();
         $input_str_array = explode(" ", $str_lower);
+        $str_size=0;
         $search_word = strtolower($word);
-        if(in_array($search_word, $input_str_array))
-        $count++;
-        return  $count;
+
+        // while($str_size < sizeof($input_str_array))
+        // {
+        //     foreach($input_str_array as $input_str )
+        //         {
+        //             if($search_word == $input_str)
+        //             {
+        //                 $count++;
+        //                 $str_size++;
+        //             }
+        //         }
+        //
+        // }
+        foreach($input_str_array as $input_str )
+                {
+                    if($search_word == $input_str)
+                    {
+                        $count++;
+
+                    }
+                }
+
+         return  $count;
     }
 }
 ?>
